@@ -1,14 +1,15 @@
 import React from "react"
 
-export default function MenuIten (props){
+export default function MenuItem (props){
 
     const [qtd, setQtd] = React.useState(0);
     const [selectedFlag, setSelectedFlag] = React.useState(false);
     
-    function selectIten(){
+    function selectItem(){
         if(!selectedFlag){
             setSelectedFlag(true);
             setQtd(1);
+            console.log(props.name); // REMOVER DEPOIS
         }
     }
 
@@ -29,7 +30,7 @@ export default function MenuIten (props){
     }
     
     return(
-        <div onClick={selectIten} className={selectedFlag ? "menu-iten selected" : "menu-iten"}>
+        <div onClick={selectItem} className={selectedFlag ? "menu-item selected" : "menu-item"}>
             <img src={props.image} alt=""/>
             <span className="name">{props.name}</span>
             <span className="description">{props.description}</span>

@@ -55,14 +55,14 @@ h2{
     color: #333333;
 }
 
-.container-menu-itens{
+.container-menu-items{
     width: calc(100vw - var(--section-margin-left));  /* testar usando variavel depois, pra ver se buga */
     margin-top: 17px;
     display: flex;
     overflow-x: scroll;
 }
 
-.menu-iten{
+.menu-item{
     height: 216px;
     width: 172px;
     background: #FFFFFF;
@@ -110,7 +110,19 @@ img{
     bottom: 13px;
     height: 19px;
     width: 47px;
-    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.counter ion-icon{
+    width: 15px;
+    height: 15px;
+}
+
+.no-display{
+    display: none;
 }
 
 footer{
@@ -124,6 +136,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 }
 
 button{
@@ -139,4 +152,8 @@ button{
     letter-spacing: 0.018em;
     text-align: center;
     color: #FFFFFF
+}
+
+.selected{
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
 }
