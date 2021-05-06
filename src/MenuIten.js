@@ -5,6 +5,7 @@ export default function MenuIten (props){
             <span className="name">{props.name}</span>
             <span className="description">{props.description}</span>
             <span className="price">{props.price}</span>
+            <div className="counter"></div>
         </div>
         )
 }
