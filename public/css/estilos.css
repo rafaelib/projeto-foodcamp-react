@@ -14,6 +14,10 @@ body{
     background: #E5E5E5;
 }
 
+.valid{
+    background-color: #32B72F;
+}
+
 header{
     height: 92px;
     width: 100vw;
@@ -151,7 +155,8 @@ button{
     line-height: 23px;
     letter-spacing: 0.018em;
     text-align: center;
-    color: #FFFFFF
+    color: #FFFFFF;
+    z-index: 1;
 }
 
 .selected{
