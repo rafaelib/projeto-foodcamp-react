@@ -8,102 +8,103 @@ export default function App(){
     const [counterDrink, setCounterDrink] = React.useState(0);
     const [counterDessert, setCounterDessert] = React.useState(0);
 
-    function validOrder (){
-        alert("Pedido Finalizado com Sucesso");
-    }
+    function enviarMensagem(){
+        const celular = "5521965670919";  
+        let texto = `Você finalizou seu pedido`;
+        texto = window.encodeURIComponent(texto);
+        window.open("https://api.whatsapp.com/send?phone=" + celular + "&text=" + texto);
+      }
 
     const food = [
+        {image: "imagens/sunomono.jpg",
+            name: "Sunomono",
+            description: "Descrição do prato numero 1",
+            price: "R$ 24,99",
+            category: "food" 
+            }, 
         {
-            image: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg",
-            name: "Arroz",
-            description: "Fonte de carboidratos. Alimento Branco",
-            price: "R$ 4,99",
+            image: "imagens/guioza.jpg",
+            name: "Guioza",
+            description: "Descrição do prato numero 2",
+            price: "R$ 25,99",
             category: "food"
             }, 
         {
-            image: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg",
-            name: "Feijao",
-            description: "Fonte de carboidratos. Alimento Preto",
-            price: "R$ 5,99",
+            image: "imagens/harumaki.jpg",
+            name: "Harumaki",
+            description: "Descrição do prato numero 3",
+            price: "R$ 26,99",
             category: "food"
             }, 
         {
-            image: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg",
-            name: "Banana",
-            description: "Fonte de carboidratos. Alimento Amarelo",
-            price: "R$ 6,99",
-            category: "food"
-            }, 
-        {
-            image: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg",
-            name: "Livro",
-            description: "Fonte de carboidratos. Alimento Cinza",
-            price: "R$ 7,99",
+            image: "imagens/missoshiru.jpg",
+            name: "Missoshiru",
+            description: "Descrição do prato numero 4",
+            price: "R$ 27,99",
             category: "food"
             }
     ]
     const drinks = [
         {
-            image: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg",
-            name: "Arroz",
-            description: "Bebida de carboidratos. Alimento Branco",
-            price: "R$ 4,99",
+            image: "imagens/aojiru.jpg",
+            name: "Aojiru",
+            description: "Descrição da bebida numero 1",
+            price: "R$ 14,99",
             category: "drink"
             }, 
         {
-            image: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg",
-            name: "Feijao",
-            description: "Bebida de carboidratos. Alimento Preto",
-            price: "R$ 5,99",
+            image: "imagens/pocari.jpg",
+            name: "Pocari",
+            description: "Descrição da bebida numero 2",
+            price: "R$ 15,99",
             category: "drink"
             }, 
         {
-            image: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg",
-            name: "Banana",
-            description: "Bebida de carboidratos. Alimento Amarelo",
-            price: "R$ 6,99",
+            image: "imagens/genmaicha.jpg",
+            name: "Genmaicha",
+            description: "Descrição da bebida numero 3",
+            price: "R$ 16,99",
             category: "drink"
             }, 
         {
-            image: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg",
-            name: "Livro",
-            description: "Bebida de carboidratos. Alimento Cinza",
-            price: "R$ 7,99",
+            image: "imagens/melon-soda1.jpg",
+            name: "Melon Soda",
+            description: "Descrição da bebida numero 4",
+            price: "R$ 17,99",
             category: "drink"
             }
     ];
     const desserts = [
         {
-            image: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg",
-            name: "Arroz",
-            description: "Doce de carboidratos. Alimento Branco",
+            image: "imagens/warabi.jpg",
+            name: "Warabi",
+            description: "Descrição da sobremesa numero 1",
             price: "R$ 4,99",
             category: "dessert"
             
 }, 
         {
-            image: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg",
-            name: "Feijao",
-            description: "Doce de carboidratos. Alimento Preto",
+            image: "imagens/wagashi.jpg",
+            name: "Wagashi",
+            description: "Descrição da sobremesa numero 2",
             price: "R$ 5,99",
             category: "dessert"
             
 }, 
         {
-            image: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg",
-            name: "Banana",
-            description: "Doce de carboidratos. Alimento Amarelo",
+            image: "imagens/daifuku.jpg",
+            name: "Daifuku",
+            description: "Descrição da sobremesa numero 3",
             price: "R$ 6,99",
             category: "dessert"
             
 }, 
         {
-            image: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-arroz-soltinho-1200x774.jpg",
-            name: "Livro",
-            description: "Doce de carboidratos. Alimento Cinza",
+            image: "imagens/dorayaki.jpg",
+            name: "Dorayaki",
+            description: "Descrição da sobremesa numero 4",
             price: "R$ 7,99",
             category: "dessert"
-            
 }
     ];
     
@@ -117,7 +118,7 @@ export default function App(){
 
             <footer>
                 <button className={counterFood > 0 && counterDrink > 0 && counterDessert > 0 ? "no-display" : ""}>Selecione os 3 items<br/> para fechar o pedido</button>
-                <button onClick={validOrder} className={counterFood > 0 && counterDrink > 0 && counterDessert > 0 ? "valid" : "valid no-display"}>Finalizar Pedido</button>
+                <button onClick={enviarMensagem} className={counterFood > 0 && counterDrink > 0 && counterDessert > 0 ? "valid" : "valid no-display"}>Finalizar Pedido</button>
             </footer>
         </>
     )
