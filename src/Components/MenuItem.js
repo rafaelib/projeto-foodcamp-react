@@ -6,8 +6,6 @@ export default function MenuItem (props){
     const [selectedFlag, setSelectedFlag] = React.useState(false);
     const {counterFood, setCounterFood, counterDrink, setCounterDrink, counterDessert, setCounterDessert } = props;
 
-    //tentar fazer usando contador
-
     function selectItem(){
         if(!selectedFlag){
             setSelectedFlag(true);
@@ -45,9 +43,6 @@ export default function MenuItem (props){
     }
 
     function increaseOrder(e){
-        console.log(counterFood);
-        console.log(counterDrink);
-        console.log(counterDessert);
         e.stopPropagation();
         setQtd(qtd+1);
     }
